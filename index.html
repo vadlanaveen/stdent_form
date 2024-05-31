@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS styles */
+    body {
+      background-image: url('https://images.shiksha.com/mediadata/images/1412081463phpqZWyHY.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    #container {
+      margin-top: 100px;
+    }
+    #form_container {
+      background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white background */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #000;
+    }
+    footer {
+      background-color: #343a40; /* dark gray */
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">University</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto"> <!-- Aligning items to the right -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="container">
+      <div id="title_container" class="text-center">
+        <h2 class="typedtext"></h2>
+        <h2 id="sub_header">University Application Form</h2>
+      </div>
+
+      <div id="form_container">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="F_name" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="L_name" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" id="number" placeholder="Phone Number">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="address" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="text-center"> <!-- Centering buttons -->
+            <button type="button" class="btn btn-primary" onclick="save()">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="get()">Get</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center">
+    <p>&copy; 2024 University. All rights reserved.</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
